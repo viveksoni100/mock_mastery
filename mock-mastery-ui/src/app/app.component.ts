@@ -14,14 +14,13 @@ var navbarHeight = 0;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  private _router: Subscription;
+  private _router!: Subscription;
 
   constructor(private renderer: Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element: ElementRef, public location: Location) {
   }
 
   @HostListener('window:scroll', ['$event'])
   hasScrolled() {
-
     var st = window.pageYOffset;
     // Make sure they scroll more than delta
     if (Math.abs(lastScrollTop - st) <= delta)
@@ -59,7 +58,10 @@ export class AppComponent implements OnInit {
       if (window.outerWidth > 991) {
         window.document.children[0].scrollTop = 0;
       } else {
-        window.document.activeElement.scrollTop = 0;
+        const activeElement = window.document.activeElement;
+        if (activeElement) { // Perform null check
+          activeElement.scrollTop = 0;
+        }
       }
       this.renderer.listen('window', 'scroll', (event) => {
         const number = window.scrollY;

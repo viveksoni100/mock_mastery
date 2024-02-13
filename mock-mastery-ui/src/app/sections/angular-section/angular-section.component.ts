@@ -67,12 +67,12 @@ export class AngularSectionComponent implements OnInit {
   isActive(date: NgbDate){
     return date.equals(this.model1) || date.equals(this.model2);
   }
-  endDateChanged(date){
+  endDateChanged(date: date){
     if (this.model1 && this.model2 && (this.model1.year > this.model2.year || this.model1.year === this.model2.year && this.model1.month > this.model2.month || this.model1.year === this.model2.year && this.model1.month === this.model2.month && this.model1.day > this.model2.day )) {
       this.model1 = this.model2;
     }
   }
-  startDateChanged(date){
+  startDateChanged(date: date){
     if (this.model1 && this.model2 && (this.model1.year > this.model2.year || this.model1.year === this.model2.year && this.model1.month > this.model2.month || this.model1.year === this.model2.year && this.model1.month === this.model2.month && this.model1.day > this.model2.day )) {
       this.model2 = this.model1;
     }
