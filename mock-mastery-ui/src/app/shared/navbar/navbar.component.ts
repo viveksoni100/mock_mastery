@@ -24,7 +24,9 @@ export class NavbarComponent implements OnInit {
        } else if (event instanceof NavigationEnd) {
            if (event.url == this.lastPoppedUrl) {
                this.lastPoppedUrl = undefined;
-               window.scrollTo(0, this.yScrollStack.pop());
+             if (this.yScrollStack.length > 0) {
+               window.scrollTo(0, this.yScrollStack.pop()!);
+             }
            } else
                window.scrollTo(0, 0);
        }

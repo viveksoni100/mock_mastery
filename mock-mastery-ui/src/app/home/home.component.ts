@@ -13,8 +13,8 @@ export class HomeComponent implements OnInit {
         right: false
     };
 
-    focus;
-    focus1;
+    focus!: boolean;
+    focus1!: boolean;
     constructor() { }
 
     ngOnInit() {}
