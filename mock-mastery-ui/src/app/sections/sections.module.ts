@@ -36,14 +36,14 @@ import { NgbdModalContent } from './modal/modal.component';
     NgbdModalComponent,
     NgbdModalContent
   ],
-  entryComponents: [NgbdModalContent],
+  // entryComponents: [NgbdModalContent],
   imports: [
     CommonModule,
     FormsModule,
     NgbModule,
     RouterModule,
-    NouisliderModule,
-    JwBootstrapSwitchNg2Module
+    NouisliderModule
+    // JwBootstrapSwitchNg2Module
   ],
   exports:[ SectionsComponent ]
 })
