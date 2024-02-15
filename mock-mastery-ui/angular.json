@@ -25,8 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "https://demos.creative-tim.com/argon-design-system-angular/styles.e898230e9f1e1b8af363.css"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
           },
@@ -85,9 +84,7 @@
               "src/assets"
             ],
             "styles": [
-              "https://demos.creative-tim.com/argon-design-system-angular/styles.e898230e9f1e1b8af363.css",
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "https://demos.creative-tim.com/argon-design-system-angular/styles.e898230e9f1e1b8af363.css"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
           }
