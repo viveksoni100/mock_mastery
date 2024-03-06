@@ -34,16 +34,4 @@ public class LoginController {
         return ResponseEntity.notFound().build();
     }
 
-    @GetMapping("/oauth/google/callback")
-    public ResponseEntity<String> googleAuthCallback(HttpSession session) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication != null && authentication.getPrincipal() instanceof DefaultOAuth2User) {
-            DefaultOAuth2User oauth2User = (DefaultOAuth2User) authentication.getPrincipal();
-            String email = oauth2User.getAttribute("email");
-            return ResponseEntity.ok("Received Google OAuth2 callback for email: " + email);
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Google authentication failed");
-        }
-    }
-
 }
