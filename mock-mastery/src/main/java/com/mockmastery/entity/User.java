@@ -5,6 +5,7 @@ import jakarta.validation.constraints.Email;
 import lombok.Data;
 
 import java.io.Serializable;
+
 @Data
 @Entity
 @Table(name = "users")
